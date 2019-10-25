@@ -4,17 +4,18 @@ function bandFilter(input, lowerLimit, upperLimit){
         return newArray
     } else {
     input.forEach(function(item){
-        if(item > lowerLimit && item < upperLimit){
+        if(item >= lowerLimit && item <= upperLimit){
             newArray.push(item)
-            console.log(item)
         } else if( item < lowerLimit){
             item = lowerLimit
             newArray.push(item)
         }
         else if( item > upperLimit){
             item = upperLimit
+            console.log(item)
             newArray.push(item)
-        }
+            console.log(newArray)
+        }   
     })
     return newArray
 }

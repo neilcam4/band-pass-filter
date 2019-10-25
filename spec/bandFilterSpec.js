@@ -33,10 +33,17 @@ describe('BAND FILTER', function(){
         expect(result).toEqual([3,4,5,6,])
     })
     it('should return an array same length as inputs but with amended numbers above the upper limit', function(){
-        let input = [ 4, 4, 5, 9]
+        let input = [4, 4, 5, 9]
         let lowerLimit = 3
         let upperLimit = 7
         let result = bandFilter(input, lowerLimit, upperLimit)
         expect(result).toEqual([4,4,5,7])
+    })
+    it('should return an array same length as inputs but with amended numbers above the upper limit', function(){
+        let input = [1,2,3,4]
+        let lowerLimit = 2
+        let upperLimit = 3
+        let result = bandFilter(input, lowerLimit, upperLimit)
+        expect(result).toEqual([2,2,3,3])
     })
 })
